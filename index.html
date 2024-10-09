@@ -100,7 +100,10 @@
             const withdrawBtn = document.getElementById('wdbtn');
             withdrawBtn.addEventListener('click', function(){
              const finalWdAmount = getInputNumber('wdinput'); 
-             console.log(finalWdAmount);  
+            //  console.log(finalWdAmount);  
+            updateSpanText('currentWithdraw', finalWdAmount);
+            updateSpanText('currentBalance', -1*finalWdAmount);
+            document.getElementById('wdinput').value = "";
             })
                 
             function getInputNumber(id){
